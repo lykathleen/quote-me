@@ -26,36 +26,24 @@ module.exports = {
           },
         },
       },
-      // Config for CSS files
+      // Config for SCSS files
       {
-        test: /\.scss$/,
+        test: /\.(s(a|c)ss)$/,
         use: [
-          {
-            loader: 'css-loader',
-            options: {
-              sourceMap: true,
-              modules: true,
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
+          prod ? MiniCssExtractPlugin.loader : 'style-loader',
+          'css-loader',
+          'sass-loader',
         ],
       },
-      // For images
-      {
-        test: /\.(png|jp(e*)g|svg|gif)$/,
-        use: ['file-loader'],
-      },
       // for SVG files
-      {
-        test: /\.svg$/,
-        use: ['@svgr/webpack'],
-      },
+      // {
+      //   test: /\.svg$/,
+      //   use: ['@svgr/webpack'],
+      // },
     ],
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
   },
   devtool: prod ? undefined : 'source-map',
   // Tell webpack to inject the bundled file as a script tag to the HTML file
