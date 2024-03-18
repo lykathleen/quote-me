@@ -7,3 +7,34 @@
   background-color: #fff;
   box-shadow: 0 0 24px 0 #876687;
 }
+
+.newQuoteButton {
+  height: 38px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background-color: RGB(228, 188, 227);
+  outline: none;
+  font-size: 0.85em;
+  padding: 8px 18px 6px 18px;
+  margin-top: 30px;
+  opacity: 1;
+  cursor: pointer;
+  float: right;
+}
+
+.socialMediaButton {
+  float: left;
+  padding: 0px;
+  margin-right: 5px;
+  height: 30px;
+  width: 40px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background-color: RGB(228, 188, 227);
+  outline: none;
+  margin-top: 30px;
+  opacity: 1;
+  cursor: pointer;
+}
