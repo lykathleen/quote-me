@@ -12,16 +12,11 @@ export const quoteSlice = createSlice({
   },
   reducers: {
     generateNewQuote: (state) => {
-      // const pickBackgroundColour = () => {
       const index = Math.floor(Math.random() * backgroundColour.length);
       quoteSlice.bgColour = backgroundColour[index];
-      // };
 
-      // const pickQuote = () => {
-      // const index = Math.floor(Math.random() * backgroundColour.length);
       quoteSlice.text = quotes[index].text;
       quoteSlice.author = quotes[index].author;
-      // };
     }
   }
 });
