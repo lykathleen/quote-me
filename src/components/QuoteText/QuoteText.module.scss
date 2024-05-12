@@ -1,0 +1,17 @@
+.quoteText {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 450px;
+  height: auto;
+  clear: both;
+  font-weight: 500;
+}
+
+.quoteText div {
+  font-size: 28px;
+}
+
+.quoteText span {
+  text-align: right;
+}

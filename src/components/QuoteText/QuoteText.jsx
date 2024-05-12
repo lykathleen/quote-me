@@ -8,10 +8,10 @@ const QuoteText = () => {
 
   console.log(quote);
   return (
-    <>
-      <div className="quoteText">{quote.text}</div>
-      <div className="quoteAuthor">{quote.author}</div>
-    </>
+    <div className={styles.quoteText}>
+      <div><i class="fa fa-quote-left fa-pull-left fa-border">{quote.text}</i></div>
+      <span>{quote.author}</span>
+    </div>
   );
 };
 

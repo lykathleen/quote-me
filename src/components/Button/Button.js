@@ -1,9 +1,18 @@
 import React from 'react';
-const Button = ({ text, className }) => {
+
+import styles from './Button.module.scss';
+/**
+ *
+ * text
+ * icon/pic
+ * onClick -> link?, but onClick changes quote
+ * size
+ */
+const Button = ({ link, children }) => {
   return (
-    <div className={styles.button}>
-      <button className={className}>{text}</button>
-    </div>
+    <a href={link} className={styles.button} >
+      {children}
+    </a>
   );
 };
 

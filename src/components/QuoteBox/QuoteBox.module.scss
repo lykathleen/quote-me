@@ -1,40 +1,22 @@
 .quoteBox {
+  display: flex;
+  flex-direction: column;
   border-radius: 3px;
-  position: relative;
   width: 450px;
   padding: 40px 50px;
-  display: table;
-  background-color: #fff;
-  box-shadow: 0 0 24px 0 #876687;
+  background-color: var(--lightPink);
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  row-gap: 16px;
 }
 
-.newQuoteButton {
-  height: 38px;
-  border: none;
-  border-radius: 3px;
-  color: #fff;
-  background-color: RGB(228, 188, 227);
-  outline: none;
-  font-size: 0.85em;
-  padding: 8px 18px 6px 18px;
-  margin-top: 30px;
-  opacity: 1;
-  cursor: pointer;
-  float: right;
+.buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
-.socialMediaButton {
-  float: left;
-  padding: 0px;
-  margin-right: 5px;
-  height: 38px;
-  width: 40px;
-  border: none;
-  border-radius: 3px;
-  color: #fff;
-  background-color: RGB(228, 188, 227);
-  outline: none;
-  margin-top: 30px;
-  opacity: 1;
-  cursor: pointer;
+.socialMediaButtons {
+  display: flex;
+  column-gap: 8px;
 }
