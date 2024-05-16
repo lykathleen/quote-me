@@ -6,17 +6,15 @@ const backgroundColour = ['white', 'black', 'pink'];
 export const quoteSlice = createSlice({
   name: 'quote',
   initialState: {
-    text: 'insert quote',
-    author: 'insert author',
+    text: quotes[0].text,
+    author: quotes[0].author,
     bgColour: ''
   },
   reducers: {
     generateNewQuote: (state) => {
       const index = Math.floor(Math.random() * backgroundColour.length);
-      quoteSlice.bgColour = backgroundColour[index];
-
-      quoteSlice.text = quotes[index].text;
-      quoteSlice.author = quotes[index].author;
+      state.text = quotes[index].text;
+      state.author = quotes[index].author;
     }
   }
 });
