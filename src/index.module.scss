@@ -1,10 +1,12 @@
+:root {
+  --pink: #f2c6c2;
+  --lightPink: #f2e8df;
+  --peachPink: #f28585;
+  --mustard: #f2b263;
+  --sage: #86a69d;
+}
+
 body {
-  background-color: rgb(228 188 227);
-  color: rgb(228 188 227);
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background-color: var(--pink);
+  color: var(--pink);
 }
