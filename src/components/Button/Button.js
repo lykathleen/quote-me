@@ -8,9 +8,9 @@ import styles from './Button.module.scss';
  * onClick -> link?, but onClick changes quote
  * size
  */
-const Button = ({ link, children }) => {
+const Button = ({ link, children, id }) => {
   return (
-    <a href={link} className={styles.button} >
+    <a id={id} href={link} className={styles.button} target="blank">
       {children}
     </a>
   );

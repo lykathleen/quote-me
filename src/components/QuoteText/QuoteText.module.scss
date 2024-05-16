@@ -1,17 +1,25 @@
-.quoteText {
+.quoteTextContainer {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 450px;
+  width: 100%;
   height: auto;
   clear: both;
   font-weight: 500;
+  row-gap: 24px;
 }
 
-.quoteText div {
+.quoteTextContainer div {
   font-size: 28px;
 }
 
-.quoteText span {
+.quoteTextContainer span {
   text-align: right;
+}
+
+.text i {
+  display: flex;
+  flex-direction: row;
+  column-gap: 6px;
+  border: none;
 }
