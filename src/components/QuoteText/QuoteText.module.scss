@@ -23,3 +23,16 @@
   column-gap: 6px;
   border: none;
 }
+
+.quoteText {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+.fadeIn {
+  opacity: 1;
+}

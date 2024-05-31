@@ -8,7 +8,7 @@ const quotes = [
     author: '- Norman Vaughan'
   },
   {
-    text: 'I didn’t fail the test. I just found 100 ways to do it wrong.',
+    text: "I didn't fail the test. I just found 100 ways to do it wrong.",
     author: '- Benjamin Franklin'
   },
   {

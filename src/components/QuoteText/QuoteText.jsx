@@ -3,14 +3,15 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import styles from './QuoteText.module.scss';
 
-const QuoteText = () => {
+const QuoteText = ({visible}) => {
   const quote = useSelector((state) => state.quote);
 
-  console.log(quote);
   return (
     <div className={styles.quoteTextContainer}>
       <div className={styles.text} id='text'>
-        <i className={styles.quoteIcon} class="fa fa-quote-left fa-pull-left fa-border">{quote.text}</i>
+      <div className={`${styles.quoteText} ${visible ? styles.fadeIn : styles.fadeOut}`}>
+        <i class="fa fa-quote-left fa-pull-left fa-border">{quote.text}</i>
+      </div>
       </div>
       <span id='author'>{quote.author}</span>
     </div>

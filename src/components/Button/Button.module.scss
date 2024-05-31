@@ -4,8 +4,12 @@
   height: 28px;
   border: none;
   border-radius: 3px;
-  color: var(--mustard);
-  background-color: var(--peachPink);
+  --background-color: var(--pink);
+  background-color: var(--background-color);
+  --button-color: white;
+  color: var(--button-color);
+  // color: var(--mustard);
+  // background-color: var(--peachPink);
   font-family: 'Raleway', sans-serif;
   padding: 8px 18px 8px 18px;
 }

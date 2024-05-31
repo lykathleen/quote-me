@@ -10,7 +10,7 @@ module.exports = {
   entry: './src/index.js',
   // Define output path for the bundled file in the dist folder
   output: {
-    path: __dirname + '/dist/',
+    path: __dirname + '/dist/'
   },
   module: {
     // Configure webpack to transpile files using babel before bundling
@@ -22,9 +22,9 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             // Telling babel what to transpile - ES2015+ syntax and react code
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-          },
-        },
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
+        }
       },
       // Config for SCSS files
       {
@@ -32,25 +32,30 @@ module.exports = {
         use: [
           prod ? MiniCssExtractPlugin.loader : 'style-loader',
           'css-loader',
-          'sass-loader',
-        ],
+          'sass-loader'
+        ]
       },
-      // for SVG files
-      // {
-      //   test: /\.svg$/,
-      //   use: ['@svgr/webpack'],
-      // },
-    ],
+      {
+        test: /\.svg$/,
+        issuer: /\.[jt]sx?$/,
+        use: {
+          loader: '@svgr/webpack',
+          options: {
+            svgo: false
+          }
+        }
+      }
+    ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ['*', '.js', '.jsx']
   },
   devtool: prod ? undefined : 'source-map',
   // Tell webpack to inject the bundled file as a script tag to the HTML file
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html',
+      template: 'index.html'
     }),
-    new MiniCssExtractPlugin(),
-  ],
+    new MiniCssExtractPlugin()
+  ]
 };
