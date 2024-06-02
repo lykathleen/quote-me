@@ -10,7 +10,9 @@ module.exports = {
   entry: './src/index.js',
   // Define output path for the bundled file in the dist folder
   output: {
-    path: __dirname + '/dist/'
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     // Configure webpack to transpile files using babel before bundling
@@ -54,7 +56,7 @@ module.exports = {
   // Tell webpack to inject the bundled file as a script tag to the HTML file
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html'
+      template: './index.html'
     }),
     new MiniCssExtractPlugin()
   ]
