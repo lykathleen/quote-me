@@ -56,7 +56,7 @@ module.exports = {
   // Tell webpack to inject the bundled file as a script tag to the HTML file
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html'
+      template: './public/index.html'
     }),
     new MiniCssExtractPlugin()
   ]
